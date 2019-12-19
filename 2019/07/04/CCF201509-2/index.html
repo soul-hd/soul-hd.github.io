@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    CCF201509-2（python）
+  
+</title>
+
+<meta name="description" content="问题描述　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？　　注意闰年的2月有29天。满足下面条件之一的是闰年：　　1） 年份是4的整数倍，而且不是100的整数倍；　　2） 年份是400的整数倍。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CCF201509-2（python）">
+<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;2019&#x2F;07&#x2F;04&#x2F;CCF201509-2&#x2F;index.html">
+<meta property="og:site_name" content="魂淡的随笔录">
+<meta property="og:description" content="问题描述　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？　　注意闰年的2月有29天。满足下面条件之一的是闰年：　　1） 年份是4的整数倍，而且不是100的整数倍；　　2） 年份是400的整数倍。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-04T00:00:00.000Z">
+<meta property="article:modified_time" content="2019-11-18T06:28:02.086Z">
+<meta property="article:author" content="魂淡">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="ccf">
+<meta name="twitter:card" content="summary">
+
+
+  <link rel="alternative" href="/atom.xml" title="魂淡的随笔录" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">魂淡的随笔录</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">魂淡的随笔录</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">魂淡</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1562073536963&amp;di=edcc0c5cf4c87341f4ec04da6a053640&amp;imgtype=0&amp;src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201405%2F25%2F20140525112211_WUacn.thumb.700_0.png"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">分类</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/about-%E5%85%B3%E4%BA%8E/">about 关于</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4/">小说</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a><span class="category-list-count">8</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">标签</a>
+                <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ccf/" rel="tag">ccf</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%91%E5%B9%B4/" rel="tag">少年</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">16</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/" title="其他" external="false">其他</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-CCF201509-2" class="article article-type-post">
+  
+    <h1 class="article-header">
+      CCF201509-2（python）
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2019-07-04
+</span>
+
+    
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></li></ul>
+	</span>
+
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ccf/" rel="tag">ccf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <p>问题描述<br>　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？<br>　　注意闰年的2月有29天。满足下面条件之一的是闰年：<br>　　1） 年份是4的整数倍，而且不是100的整数倍；<br>　　2） 年份是400的整数倍。</p>
+<a id="more"></a>    
+<p>输入格式<br>　　输入的第一行包含一个整数y，表示年份，年份在1900到2015之间（包含1900和2015）。<br>　　输入的第二行包含一个整数d，d在1至365之间。<br>输出格式<br>　　输出两行，每行一个整数，分别表示答案的月份和日期。<br>样例输入<br>2015<br>80<br>样例输出<br>3<br>21<br>样例输入<br>2000<br>40<br>样例输出<br>2<br>9    </p>
+<p>思路：<br>将非闰月的每月天数存入列表中<br>先判断该年是否为闰年，若是则将列表中的二月改为29天<br>设一个循环让输入的天数去不断-列表里的天数，同时记录减了几个月，直到两则相减小于0则将这次的天数为该月的第几天。</p>
+<p>代码：    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">n = int(input())</span><br><span class="line">m = int(input())</span><br><span class="line">d=[<span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>]</span><br><span class="line"><span class="keyword">if</span> (n % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> n % <span class="number">100</span> != <span class="number">0</span>) <span class="keyword">or</span> n % <span class="number">400</span> == <span class="number">0</span>:</span><br><span class="line">   d[<span class="number">1</span>] = <span class="number">29</span></span><br><span class="line">mon = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> d:</span><br><span class="line">    <span class="keyword">if</span> m - i &gt; <span class="number">0</span>:</span><br><span class="line">        m = m - i</span><br><span class="line">        mon = mon + <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">print(mon)</span><br><span class="line">print(m)</span><br></pre></td></tr></table></figure>
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2019 魂淡的随笔录 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+</body>
+</html>

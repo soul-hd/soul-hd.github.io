@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<title>
+  
+    防火墙配置NAT规则
+  
+</title>
+
+<meta name="description" content="防火墙配置NAT规则前言本教程仅实用于eve-ng实现防火墙配置NAT规则，同时由于笔者懒惰，做实验时偷工减料少截图少配置某些东西，因此食用本教程时出现一些不可预料的意外或者错误时请保持良好的心态，锤锤电脑什么的，千万不要锤笔者，笔者很无辜的。 使用GMS3的大佬们，本教程不适合你们，你们可以出门左拐了（其实也是挺适合的，跳过前面几个步骤就是了）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="防火墙配置NAT规则">
+<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;2019&#x2F;11&#x2F;15&#x2F;%E9%98%B2%E7%81%AB%E5%A2%99%E9%85%8D%E7%BD%AENAT%E8%A7%84%E5%88%99&#x2F;index.html">
+<meta property="og:site_name" content="魂淡的随笔录">
+<meta property="og:description" content="防火墙配置NAT规则前言本教程仅实用于eve-ng实现防火墙配置NAT规则，同时由于笔者懒惰，做实验时偷工减料少截图少配置某些东西，因此食用本教程时出现一些不可预料的意外或者错误时请保持良好的心态，锤锤电脑什么的，千万不要锤笔者，笔者很无辜的。 使用GMS3的大佬们，本教程不适合你们，你们可以出门左拐了（其实也是挺适合的，跳过前面几个步骤就是了）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;MNcMVJ.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaCCY4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaC9kF.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Ma9zwT.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaCSTU.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaCWh4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaC5cR.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaC7B6.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaCqAO.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;MNcE80.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;MaCA61.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Ma8RL6.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Ma86zR.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Ma82sx.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Ma8gQ1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;15&#x2F;Ma8yW9.png">
+<meta property="article:published_time" content="2019-11-15T00:00:00.000Z">
+<meta property="article:modified_time" content="2019-11-18T03:23:23.257Z">
+<meta property="article:author" content="魂淡">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2019&#x2F;11&#x2F;14&#x2F;MNcMVJ.png">
+
+
+  <link rel="alternative" href="/atom.xml" title="魂淡的随笔录" type="application/atom+xml">
+
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+
+<link rel="stylesheet" href="/perfect-scrollbar/css/perfect-scrollbar.min.css">
+
+
+<link rel="stylesheet" href="/styles/main.css">
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+<body
+  
+    class="monochrome"
+  
+  >
+  <div class="mobile-header">
+  <button class="sidebar-toggle" type="button">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="title" href="/">魂淡的随笔录</a>
+</div>
+
+  <div class="main-container">
+    <div class="sidebar">
+  <div class="header">
+    <h1 class="title"><a href="/">魂淡的随笔录</a></h1>
+    
+    <div class="info">
+      <div class="content">
+        
+        
+          <div class="author">魂淡</div>
+        
+      </div>
+      
+        <div class="avatar">
+          
+            <a href="/about"><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1562073536963&amp;di=edcc0c5cf4c87341f4ec04da6a053640&amp;imgtype=0&amp;src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201405%2F25%2F20140525112211_WUacn.thumb.700_0.png"></a>
+          
+        </div>
+      
+    </div>
+  </div>
+  <div class="body">
+    
+      
+        <ul class="nav">
+          
+            
+              <li class="category-list-container">
+                <a href="javascript:;">分类</a>
+                <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/about-%E5%85%B3%E4%BA%8E/">about 关于</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E8%AF%B4/">小说</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a><span class="category-list-count">8</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="tag-list-container">
+                <a href="javascript:;">标签</a>
+                <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ccf/" rel="tag">ccf</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%91%E5%B9%B4/" rel="tag">少年</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a><span class="tag-list-count">1</span></li></ul>
+              </li>
+            
+          
+            
+              <li class="archive-list-container">
+                <a href="javascript:;">归档</a>
+                <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/">2019</a><span class="archive-list-count">16</span></li></ul>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/" title="主页" external="false">主页</a>
+              </li>
+            
+          
+            
+              <li>
+                <a href="/" title="其他" external="false">其他</a>
+              </li>
+            
+          
+        </ul>
+      
+        <ul class="nav">
+          
+            
+              <li>
+                <a href="/atom.xml" title="RSS" external="false">RSS</a>
+              </li>
+            
+          
+        </ul>
+      
+    
+  </div>
+</div>
+
+    <div class="main-content">
+      
+        <div style="max-width: 1000px">
+      
+          <article id="post-防火墙配置NAT规则" class="article article-type-post">
+  
+    <h1 class="article-header">
+      防火墙配置NAT规则
+    </h1>
+  
+  
+
+  <div class="article-info">
+    <span class="article-date">
+  2019-11-15
+</span>
+
+    
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E6%9D%82%E9%A1%B9/">杂项</a></li></ul>
+	</span>
+
+
+    
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%99%E7%A8%8B/" rel="tag">教程</a></li></ul>
+	</span>
+
+
+  </div>
+  <div class="article-entry">
+    <h1 id="防火墙配置NAT规则"><a href="#防火墙配置NAT规则" class="headerlink" title="防火墙配置NAT规则"></a>防火墙配置NAT规则</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本教程仅实用于eve-ng实现防火墙配置NAT规则，同时由于笔者懒惰，做实验时偷工减料少截图少配置某些东西，因此食用本教程时出现一些不可预料的意外或者错误时请保持良好的心态，锤锤电脑什么的，千万不要锤笔者，笔者很无辜的。</p>
+<p>使用GMS3的大佬们，本教程不适合你们，你们可以出门左拐了（其实也是挺适合的，跳过前面几个步骤就是了）</p>
+<a id="more"></a>
+
+<h2 id="0x01画拓扑图"><a href="#0x01画拓扑图" class="headerlink" title="0x01画拓扑图"></a>0x01画拓扑图</h2><p><img src="https://s2.ax1x.com/2019/11/14/MNcMVJ.png" alt=""></p>
+<p>本拓扑图里参照实验指导书制作，因为使用的是eve-ng而非GMS3，因此我们用将3725路由器配置成一个傻瓜交换机来代替原本的拓扑图里的交换机，cloud代替host主机，VPC代替服务器。（3725配置成傻瓜交换机只需要将Slot1改为NM-16ESW，然后接口全部用fa1/0以后的接口就行了）</p>
+<p>PS:傻瓜交换机记得初始化（开机后输入no shut以及wr就行了（大概吧，雾）</p>
+<h2 id="0x02配置ip地址"><a href="#0x02配置ip地址" class="headerlink" title="0x02配置ip地址"></a>0x02配置ip地址</h2><p>《实验指导书》中需要配置IP的东西有很多，经过研究，你若是为了快速完成实验，实际上你只需要配置部分ip就行了。</p>
+<p>我是先将vpc的ip给配置了，下面给出配置命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VPCS&gt;ip 192.168.108.20 255.255.255.0</span><br><span class="line">VPCS&gt;save</span><br></pre></td></tr></table></figure>
+
+<p>具体ip参考指导书的ip，其中inside区的ip用自己虚拟机的ip（因为我们需要通过云来连接自己的虚拟机，从而来管理防火墙，因此我们需要将ip配成自己虚拟机的ip）</p>
+<p>下面我们配置防火墙的eth1口的ip</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ciscoasa&gt;en</span><br><span class="line">Password:</span><br><span class="line">ciscoasa#conf t</span><br><span class="line">ciscoasa(config)#int eth1</span><br><span class="line">ciscoasa(config-if)#nameif inside</span><br><span class="line">INFO:Security level for &quot;inside&quot; set to 100 by default.</span><br><span class="line">ciscoasa(config-if)#ip add 192.168.108.10 255.255.255.0</span><br><span class="line">ciscoasa(config-if)#security-level 100</span><br><span class="line">ciscoasa(config-if)#no shut</span><br><span class="line">ciscoasa(config-if)#end</span><br><span class="line">ciscoasa#wr</span><br><span class="line">Building configuration... </span><br><span class="line">Cryptochecksum: 844b165f 2e7ab97d 50e85646 b36511a0  </span><br><span class="line"> </span><br><span class="line">6659 bytes copied in 1.60 secs (6659 bytes&#x2F;sec) [OK] </span><br><span class="line"></span><br><span class="line">ciscoasa&gt;en</span><br><span class="line">ciscoasa# conf t </span><br><span class="line">ciscoasa(config)# http server enable </span><br><span class="line">ciscoasa(config)# http 0 0 inside</span><br><span class="line">ciscoasa(config)# end </span><br><span class="line">ciscoasa# wr </span><br><span class="line">Building configuration... </span><br><span class="line">Cryptochecksum: 3e153522 dc020425 70c6ff0e 98438ec9  </span><br><span class="line"> </span><br><span class="line">6713 bytes copied in 0.980 secs [OK] ciscoasa#</span><br></pre></td></tr></table></figure>
+
+<p>然后，我们就可以愉快地打开自己的虚拟机里的思科防火墙管理软件（ASDM）进行后续的操作啦！</p>
+<h2 id="0x03繁琐的策略配置（NAT规则配置）"><a href="#0x03繁琐的策略配置（NAT规则配置）" class="headerlink" title="0x03繁琐的策略配置（NAT规则配置）"></a>0x03繁琐的策略配置（NAT规则配置）</h2><h3 id="1-设置设备名和密码"><a href="#1-设置设备名和密码" class="headerlink" title="1.设置设备名和密码"></a>1.设置设备名和密码</h3><p>在Configuration里选择Device Setup，然后再选择Device Name/Pasword。</p>
+<p>输入你要填写的东西。</p>
+<h3 id="2-配置outside和DMZ区"><a href="#2-配置outside和DMZ区" class="headerlink" title="2.配置outside和DMZ区"></a>2.配置outside和DMZ区</h3><p>在Device Setup里面选择interfaces,看准自己防火墙拓扑图里面的接口，对应着配置outside和DMZ区。</p>
+<p>其中outside的IP为209.165.200.225，mask为255.255.255.0，security-level为0</p>
+<p>DMZ的IP为192.168.20.1 mask同上，security-level为50</p>
+<h3 id="3-配置全通的global策略"><a href="#3-配置全通的global策略" class="headerlink" title="3.配置全通的global策略"></a>3.配置全通的global策略</h3><p>在Configuration里的firewall里面的Access Rules里面点击add，添加一条any到any的策略。</p>
+<p>然后用vpc（inside区的那台）ping防火墙的dmz区的接口，outside区的接口，互联网的vpc，DMZ区的vpc。</p>
+<h3 id="4-配置NAT规则"><a href="#4-配置NAT规则" class="headerlink" title="4.配置NAT规则"></a>4.配置NAT规则</h3><h4 id="①配置inside区动态PAT"><a href="#①配置inside区动态PAT" class="headerlink" title="①配置inside区动态PAT"></a>①配置inside区动态PAT</h4><p>在configuration -&gt;Friewall -&gt;NAT Rules里面选择左上角的add，从里面挑选add“Nerwork Object” 添加动态PAT</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/MaCCY4.png" alt=""></p>
+<h4 id="②配置DMZ区的Webserver静态NAT"><a href="#②配置DMZ区的Webserver静态NAT" class="headerlink" title="②配置DMZ区的Webserver静态NAT"></a>②配置DMZ区的Webserver静态NAT</h4><p><img src="https://s2.ax1x.com/2019/11/15/MaC9kF.png" alt=""></p>
+<p>其中Translated Addr里面的global-addr-230是需要自己配置的，具体方法如下：</p>
+<p>先点击隔壁的…</p>
+<p>然后点击add</p>
+<p>然后如图所示</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/Ma9zwT.png" alt=""></p>
+<p>建议配置两条，一条是230一条是225</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/MaCSTU.png" alt=""></p>
+<h4 id="③配置DMZ区的WebServer的静态PAT"><a href="#③配置DMZ区的WebServer的静态PAT" class="headerlink" title="③配置DMZ区的WebServer的静态PAT"></a>③配置DMZ区的WebServer的静态PAT</h4><p><img src="https://s2.ax1x.com/2019/11/15/MaCWh4.png" alt=""></p>
+<p>name那里可以填写你喜欢的名字，只要不跟前面的名字重复就行了。</p>
+<h4 id="④使用两次-NAT-对重叠的子网执行静态-NAT"><a href="#④使用两次-NAT-对重叠的子网执行静态-NAT" class="headerlink" title="④使用两次 NAT 对重叠的子网执行静态 NAT"></a>④使用两次 NAT 对重叠的子网执行静态 NAT</h4><p>在firewall-&gt;Objects-&gt;Networ Objects/Groups里面点击add添加以下的内容</p>
+<p>GZ-Inside-Mapped：10.10.100.0/24 </p>
+<p>BJ-DMZ-Real：192.168.10.0/24 </p>
+<p>BJ-DMZ-Mapped：192.168.100.0/24 </p>
+<p><img src="https://s2.ax1x.com/2019/11/15/MaC5cR.png" alt=""></p>
+<p>然后再回到之前的NAT Rules里面定义策略</p>
+<p>这次直接点add就行了，不用选择（实在是要选的话就选择Add NAT Rule)</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/MaC7B6.png" alt=""></p>
+<h4 id="⑤对站点到站点-VPN-隧道执行-Identity-NAT"><a href="#⑤对站点到站点-VPN-隧道执行-Identity-NAT" class="headerlink" title="⑤对站点到站点 VPN 隧道执行 Identity NAT"></a>⑤对站点到站点 VPN 隧道执行 Identity NAT</h4><p>在Firewall-&gt;Objects-&gt;Network Objects/Groups里面配置以下内容：</p>
+<p>Remote-Real：10.10.10.0/24</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/MaCqAO.png" alt=""></p>
+<p>回到firewall-&gt;Access Rules-&gt;NAT Rules里面配置策略</p>
+<p>➢ Source Interface: Inside </p>
+<p>➢ Destination Interface: Outside<br>➢ Source Address: Inside-Net </p>
+<p>➢ Destination Address: Remote-Real </p>
+<p>配置 Action: Translated Packet 中的下列参数： </p>
+<p>➢ Source NAT Type：static </p>
+<p>➢ Source Address: Inside-Net </p>
+<p>➢ Destination Address: Remote-Real </p>
+<p>配置 Options 中的下列参数： </p>
+<p>➢ Enable Rule: Checked </p>
+<p>➢ Direction: Both </p>
+<h4 id="⑥对远程访问的-VPN-客户端设置动态-PAT"><a href="#⑥对远程访问的-VPN-客户端设置动态-PAT" class="headerlink" title="⑥对远程访问的 VPN 客户端设置动态 PAT"></a>⑥对远程访问的 VPN 客户端设置动态 PAT</h4><p>在Firewall-&gt;Objects-&gt;Network Objects/Groups里面配置以下内容：</p>
+<p>Remote-VPN-pool：192.168.50.0/24</p>
+<p>（方法跟之前配置Remote-Real一模一样）</p>
+<p>然后回到Firewall-&gt;Access Rules-&gt;NAT Rules里选择add-&gt;Add NAT Rule Before “NEtwork Object” NAT Rules定义策略</p>
+<p>参数如下：</p>
+<p>➢ Source Interface: Inside  </p>
+<p>➢ Destination Interface: Outside </p>
+<p>➢ Source Address: Inside-Net </p>
+<p>➢ Destination Address: Remote-VPN-pool  </p>
+<p>配置 Action: Translated Packet 中的下列参数：</p>
+<p> ➢ Source NAT Type：static </p>
+<p>➢ Source Address: Inside-Net</p>
+<p> ➢ Destination Address: Remote-VPN-pool </p>
+<p> 配置 Options 中的下列参数： </p>
+<p>➢ Enable Rule: Checked </p>
+<p>➢ Direction: Both </p>
+<p>搞定再选择Add Network Object配置以下属性：</p>
+<p>➢ Name: Remote-VPN-pool </p>
+<p>➢ Type: Network </p>
+<p>➢ IP Address: 192.168.50.0 </p>
+<p>➢ Netmask: 255.255.255.0 </p>
+<p>➢ Add automatic Address Translation Rules: checked </p>
+<p>➢ Type: Dynamic PAT(Hide) ➢ Translated Addr: outside </p>
+<p>点击 Advanced 打开 Advanced NAT Settings 对话框，在 Interface 部分配置下列属性。 </p>
+<p>➢ Source Interface：outside </p>
+<p>➢ Destination Interface：outside </p>
+<p>最后的最后，当你做完以上繁琐的步骤后，你的截图应该跟下面的图片差不多</p>
+<p><img src="https://s2.ax1x.com/2019/11/14/MNcE80.png" alt=""></p>
+<p><img src="https://s2.ax1x.com/2019/11/15/MaCA61.png" alt=""></p>
+<h2 id="0x04验证"><a href="#0x04验证" class="headerlink" title="0x04验证"></a>0x04验证</h2><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3><p>在Configuration -&gt; Firewall -&gt; Access Rules-&gt;NAT Rules里选择add-&gt;Add ”Network Object” NAT Rule 配置以下属性</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/Ma8RL6.png" alt=""></p>
+<p>然后再点击Add Network Object</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/Ma86zR.png" alt=""></p>
+<p>配置完成后就点击Packet Trace验证了。</p>
+<p>（如果验证出现缺少host的显示，就要去asa里配置一条静态路由，让它进行下一跳。具体命令请百度一下，这里就不贴出来了。）</p>
+<p>验证结果如下：</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/Ma82sx.png" alt=""></p>
+<p>接着我们继续配置</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/Ma8gQ1.png" alt=""></p>
+<p>验证</p>
+<p><img src="https://s2.ax1x.com/2019/11/15/Ma8yW9.png" alt=""></p>
+<p>好了，做到这里基本完成本次的实验了</p>
+<p>然后我们就可以愉快地保存下班了。</p>
+<p>PS：建议边做边保存，不然你就等着什么都没了然后重新开始吧！！！</p>
+
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
+      <img src="/images/cc/cc.png">
+      
+          <img src="/images/cc/by.png">
+        
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
+      </span>
+    </a>
+  </div>
+
+
+    
+
+  </footer>
+</article>
+
+
+
+
+
+
+
+          <div class="main-footer">
+  
+    © 2019 魂淡的随笔录 - Powered by <a href="http://hexo.io" target="_blank">Hexo</a> - Theme <a href="https://github.com/denjones/hexo-theme-chan" target="_blank">Chan</a>
+  
+</div>
+
+      
+        </div>
+      
+    </div>
+  </div>
+  
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/photoswipe.css">
+
+  
+<link rel="stylesheet" href="/PhotoSwipe/default-skin/default-skin.css">
+
+
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+      <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+        <div class="pswp__item"></div>
+      </div>
+
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+
+        <div class="pswp__top-bar">
+
+          <!--  Controls are self-explanatory. Order can be changed. -->
+
+          <div class="pswp__counter"></div>
+
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+          <button class="pswp__button pswp__button--share" title="Share"></button>
+
+          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+          <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+          <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+          <!-- element will get class pswp__preloader--active when preloader is running -->
+          <div class="pswp__preloader">
+            <div class="pswp__preloader__icn">
+              <div class="pswp__preloader__cut">
+                <div class="pswp__preloader__donut"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+          <div class="pswp__share-tooltip"></div>
+        </div>
+
+        <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+
+        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+        <div class="pswp__caption">
+          <div class="pswp__caption__center"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script src="/PhotoSwipe/photoswipe.js"></script>
+
+  
+<script src="/PhotoSwipe/photoswipe-ui-default.js"></script>
+
+
+
+
+<script src="/perfect-scrollbar/js/min/perfect-scrollbar.min.js"></script>
+
+
+<script src="/scripts/main.js"></script>
+
+
+</body>
+</html>
