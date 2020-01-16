@@ -8,22 +8,17 @@
 
 <title>
   
-    CCF201509-2（python）
+    分类: 学习笔记
   
 </title>
 
-<meta name="description" content="问题描述　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？　　注意闰年的2月有29天。满足下面条件之一的是闰年：　　1） 年份是4的整数倍，而且不是100的整数倍；　　2） 年份是400的整数倍。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CCF201509-2（python）">
-<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;2019&#x2F;07&#x2F;04&#x2F;CCF201509-2&#x2F;index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="魂淡的随笔录">
+<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;categories&#x2F;%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="魂淡的随笔录">
-<meta property="og:description" content="问题描述　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？　　注意闰年的2月有29天。满足下面条件之一的是闰年：　　1） 年份是4的整数倍，而且不是100的整数倍；　　2） 年份是400的整数倍。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-07-04T00:00:00.000Z">
-<meta property="article:modified_time" content="2019-11-18T06:28:02.086Z">
 <meta property="article:author" content="魂淡">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="ccf">
+<meta property="article:tag" content="魂淡">
 <meta name="twitter:card" content="summary">
 
 
@@ -144,62 +139,64 @@
       
         <div style="max-width: 1000px">
       
-          <article id="post-CCF201509-2" class="article article-type-post">
+          <h1>学习笔记</h1>
+
+
   
-    <h1 class="article-header">
-      CCF201509-2（python）
-    </h1>
   
+    <div class="post-list">
   
 
-  <div class="article-info">
-    <span class="article-date">
-  2019-07-04
+    <div class="post-list-item article">
+      <h3 class="article-header">
+        <a href="/2019/12/01/%E6%80%9D%E7%A7%91%E8%B7%AF%E7%94%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/" >
+  思科路由学习笔记（1）
+</a>
+
+      </h3>
+      
+
+      <div class="article-info">
+        <a href="/2019/12/01/%E6%80%9D%E7%A7%91%E8%B7%AF%E7%94%B1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/"><span class="article-date">
+  2019-12-01
 </span>
-
-    
-	<span class="article-category tagcloud">
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E7%AE%97%E6%B3%95%E9%A2%98/">算法题</a></li></ul>
-	</span>
-
-
-    
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ccf/" rel="tag">ccf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
-	</span>
-
-
-  </div>
-  <div class="article-entry">
-    <p>问题描述<br>　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？<br>　　注意闰年的2月有29天。满足下面条件之一的是闰年：<br>　　1） 年份是4的整数倍，而且不是100的整数倍；<br>　　2） 年份是400的整数倍。</p>
-<a id="more"></a>    
-<p>输入格式<br>　　输入的第一行包含一个整数y，表示年份，年份在1900到2015之间（包含1900和2015）。<br>　　输入的第二行包含一个整数d，d在1至365之间。<br>输出格式<br>　　输出两行，每行一个整数，分别表示答案的月份和日期。<br>样例输入<br>2015<br>80<br>样例输出<br>3<br>21<br>样例输入<br>2000<br>40<br>样例输出<br>2<br>9    </p>
-<p>思路：<br>将非闰月的每月天数存入列表中<br>先判断该年是否为闰年，若是则将列表中的二月改为29天<br>设一个循环让输入的天数去不断-列表里的天数，同时记录减了几个月，直到两则相减小于0则将这次的天数为该月的第几天。</p>
-<p>代码：    </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">n = int(input())</span><br><span class="line">m = int(input())</span><br><span class="line">d=[<span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>]</span><br><span class="line"><span class="keyword">if</span> (n % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> n % <span class="number">100</span> != <span class="number">0</span>) <span class="keyword">or</span> n % <span class="number">400</span> == <span class="number">0</span>:</span><br><span class="line">   d[<span class="number">1</span>] = <span class="number">29</span></span><br><span class="line">mon = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> d:</span><br><span class="line">    <span class="keyword">if</span> m - i &gt; <span class="number">0</span>:</span><br><span class="line">        m = m - i</span><br><span class="line">        mon = mon + <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">print(mon)</span><br><span class="line">print(m)</span><br></pre></td></tr></table></figure>
-  </div>
-  <footer class="article-footer">
-    
-  <div class="cc">
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
-      <img src="/images/cc/cc.png">
-      
-          <img src="/images/cc/by.png">
+</a>
         
-          <img src="/images/cc/sa.png">
-      
-      <span>
-        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
-      </span>
-    </a>
-  </div>
+	<span class="article-category tagcloud">
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li></ul>
+	</span>
 
 
-    
+        
+	<span class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/" rel="tag">路由器</a></li></ul>
+	</span>
 
-  </footer>
-</article>
 
+      </div>
+      <div class="article-entry">
+        
+          <h1 id="思科路由学习笔记（1）"><a href="#思科路由学习笔记（1）" class="headerlink" title="思科路由学习笔记（1）"></a>思科路由学习笔记（1）</h1><h2 id="第一章：路由概念"><a href="#第一章：路由概念" class="headerlink" title="第一章：路由概念"></a>第一章：路由概念</h2><h3 id="路由器的功能"><a href="#路由器的功能" class="headerlink" title="路由器的功能"></a>路由器的功能</h3><h4 id="1-网络的特征"><a href="#1-网络的特征" class="headerlink" title="1.网络的特征"></a>1.网络的特征</h4><p>网络对我们的生活有着重大的影响，如今生活中我们已经离不开网络。在我们讨论网络时总会涉及许多相关的关键结构的特征以及性能相关的特征，下面是网络特征的小结：</p>
+<p><strong>拓扑</strong>：拓扑存在物理拓扑和逻辑拓扑。</p>
+<p>物理拓扑是电缆、网络设备和终端系统的布局，类似于我们在eve上画的拓扑图的布局，主要是用于说明网络设备i实际上是如何使用导线和电缆现实互连的。</p>
+<p>逻辑拓扑是数据在网络中传输的路径，说明了网络设备是如何连接到网络用户。</p>
+<p><strong>速度</strong>：速度是衡量网络中给定连读的数据传输速率的指标，以每秒位数（bit/s）表示</p>
+<p><strong>成本</strong>：表示购买网络组件以及安装和维护网络的整体费用</p>
+<p><strong>安全性</strong>：是指网络的安全程度，通过网络传输的信息的安全性</p>
+<p><strong>可用性</strong>：在需要时网络可供使用的可能性</p>
+<p><strong>可扩展性</strong>：表示网络容纳更多用户和满足更多数据传输要求的难易程度。</p>
+<p><strong>可靠性</strong>：构成网络的路由器、交换机、pc和服务器等组件的可靠程度，通常用故障概率或平均无故障工作时间（MTBF）来衡量</p>
+<h4 id="路由简介"><a href="#路由简介" class="headerlink" title="路由简介"></a>路由简介</h4><p>路由器的作用是将各个网络彼此连接起来。同时它也是一台特殊的计算机。</p>
+<p>中央处理器、操作系统、内存和存储（RAM、ROM、NVRAM、闪存、硬盘）这些都是它必须拥有的东西。</p>
+<p>同时它要求cpu与内存临时性和永久性地存储数据，以便执行操作系统指令。</p>
+
+        
+      </div>
+    </div>
+
+  
+    </div>
+  
 
 
 
