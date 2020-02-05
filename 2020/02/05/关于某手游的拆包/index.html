@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>关于某手游的拆包 | 魂淡的随笔录</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="关于某手游的拆包前言前段时间想弄live2d，看完别人提供的模型都感觉一般般，不是很好。后来在玩手游时想起该游戏有live2d的皮肤，要不弄个下来玩玩，于是就有了这次这篇文章 （本文方法所提取的东西仅用于学习研究，不用于任何商业用途） （本人提取立绘仅出于学习目的，不用做商业用途）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于某手游的拆包">
+<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;2020&#x2F;02&#x2F;05&#x2F;%E5%85%B3%E4%BA%8E%E6%9F%90%E6%89%8B%E6%B8%B8%E7%9A%84%E6%8B%86%E5%8C%85&#x2F;index.html">
+<meta property="og:site_name" content="魂淡的随笔录">
+<meta property="og:description" content="关于某手游的拆包前言前段时间想弄live2d，看完别人提供的模型都感觉一般般，不是很好。后来在玩手游时想起该游戏有live2d的皮肤，要不弄个下来玩玩，于是就有了这次这篇文章 （本文方法所提取的东西仅用于学习研究，不用于任何商业用途） （本人提取立绘仅出于学习目的，不用做商业用途）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rj4UK.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjT8e.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjHvd.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjqKA.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjLDI.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjjVP.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjvUf.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjx58.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjoCD.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rj7gH.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rvgJS.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rj54O.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rvSPS.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rjhE6.md.png">
+<meta property="article:published_time" content="2020-02-05T00:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-05T07:43:49.542Z">
+<meta property="article:author" content="魂淡">
+<meta property="article:tag" content="安卓">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;s2.ax1x.com&#x2F;2020&#x2F;02&#x2F;05&#x2F;1rj4UK.png">
+  
+    <link rel="alternate" href="/atom.xml" title="魂淡的随笔录" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/plugin/bganimation/bg.css">
+
+  
+
+<meta name="generator" content="Hexo 4.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <div class="widget-wrap mobile-header">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="../img/1.jpg">
+    <h2 class="author">魂淡</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>19</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+    </div>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+        <section id="main"><article id="post-关于某手游的拆包" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/05/%E5%85%B3%E4%BA%8E%E6%9F%90%E6%89%8B%E6%B8%B8%E7%9A%84%E6%8B%86%E5%8C%85/" class="article-date">
+  <time class="post-time" datetime="2020-02-05T00:00:00.000Z" itemprop="datePublished">
+    <span class="post-month">2月</span><br/>
+    <span class="post-day">05</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于某手游的拆包
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于某手游的拆包"><a href="#关于某手游的拆包" class="headerlink" title="关于某手游的拆包"></a>关于某手游的拆包</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前段时间想弄live2d，看完别人提供的模型都感觉一般般，不是很好。后来在玩手游时想起该游戏有live2d的皮肤，要不弄个下来玩玩，于是就有了这次这篇文章</p>
+<p>（本文方法所提取的东西仅用于学习研究，不用于任何商业用途）</p>
+<p>（本人提取立绘仅出于学习目的，不用做商业用途）</p>
+<a id="more"></a>
+
+<h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><p>-mumu模拟器</p>
+<p>-python</p>
+<p>-CLion</p>
+<p>-AssetBundleExtractor</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><h3 id="01"><a href="#01" class="headerlink" title="01"></a>01</h3><p>先在mumu模拟器上安装该手游，同时将数据包下载（之前没有下载数据包，直接把游戏安装包解压翻了半天都没找到立绘文件，后来才想起数据都没有怎么可能找到文件，真是惭愧）</p>
+<p>打开资源浏览器</p>
+<p>按照Android-&gt;data-&gt;xxxx(手游名)-&gt;files-&gt;Android</p>
+<p>可以查看到一个名为New的文件夹</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rj4UK.png" alt=""></p>
+<p>里面含有大量的.ab文件</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjT8e.png" alt=""></p>
+<p>将该文件夹复制到电脑上存放好（切勿剪切）</p>
+<h3 id="02"><a href="#02" class="headerlink" title="02"></a>02</h3><p>打开AssetBundleExtractor.exe</p>
+<p>在New文件夹里选择需要打开的文件（例如我需要获取的是live2d的模型文件，因此我需要寻找live2d的文件）</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjHvd.png" alt=""></p>
+<p>将里面的文件一个一个提取出来</p>
+<p>除了立绘之外其余的文件提取只能以.txt的文件提取出来。</p>
+<p>（先提取moc文件跟json文件，其余的一会在提取）</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjqKA.png" alt=""></p>
+<p>我们将moc和json文件后缀修改为.json，打开发现这两个文件都进行了加密处理</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjLDI.png" alt=""></p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjjVP.png" alt=""></p>
+<p>（其中moc文件用IDE打开后发现并没有相关moc的头字符）</p>
+<p>通过研究，发现这款手游的解密函数都存放在libLive2DEncryption.so里，因此我们可以直接撸一个代码进行解密就可以了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] Decrypt(<span class="keyword">byte</span>[] encrypt)</span><br><span class="line">&#123;</span><br><span class="line">    var length = encrypt.Length - <span class="number">17</span>;</span><br><span class="line">    var v24 = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">16</span>];</span><br><span class="line">    var decrypt = <span class="keyword">new</span> <span class="keyword">byte</span>[length];</span><br><span class="line">    <span class="keyword">for</span> (var i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        v24[i] = encrypt[i * <span class="number">5</span> + <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    var v20 = <span class="number">0</span>;</span><br><span class="line">    var v10 = <span class="number">-1</span>;</span><br><span class="line">    var v11 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        var v12 = v10 + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (v10 + <span class="number">1</span> &gt; <span class="number">80</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            var v13 = v24[v10 - ((v10 + ((v10 - <span class="number">16</span>) &gt;&gt; <span class="number">31</span> &gt;&gt; <span class="number">28</span>) - <span class="number">16</span>) &amp; <span class="number">0xFFFFFFF0</span>) - <span class="number">16</span>];</span><br><span class="line">            decrypt[v11] = (<span class="keyword">byte</span>)(encrypt[v10 + <span class="number">1</span>] ^ v13);</span><br><span class="line">            v12 = v10 + <span class="number">1</span>;</span><br><span class="line">            ++v11;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (v10 == <span class="number">5</span> * (v10 / <span class="number">5</span>))</span><br><span class="line">            &#123;</span><br><span class="line">                ++v20;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (v10 != <span class="number">-1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                decrypt[v11++] = (<span class="keyword">byte</span>)(encrypt[v10 + <span class="number">1</span>] ^ v24[(v10 - v20) % <span class="number">16</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        v10 = v12;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (v11 != length);</span><br><span class="line">    <span class="keyword">return</span> decrypt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解密后再次打开.json文件，可以看见代码已经解密完毕</p>
+<p>这里我们就成功将一个live2d模型提取出来了。</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjvUf.png" alt=""></p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjx58.png" alt=""></p>
+<h3 id="03"><a href="#03" class="headerlink" title="03"></a>03</h3><p>提取了live2d后突然在想能不能把普通的立绘也提取一下</p>
+<p>然后通过上述方法把普通的立绘图也提取出来</p>
+<p>提取出来发现，咦，怎么感觉跟我在游戏里看到的不一样</p>
+<p>其实游戏公司在游戏里呈现的立绘都是通道分离图像的，简单地说就是背景归背景，人物归人物，然后在游戏里统一整合。</p>
+<p>因此我们需要找到一个是Type为Texture2D的原图，一个是Type为Texture2D或Sprite的透明度背景图，而且通常情况下，原图有一个文件名，对应透明度背景图文件名会在原图文件名后面加上alpha字样，我们通过处理这两个图才能得到最终的png图像文件</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjoCD.png" alt=""></p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rj7gH.png" alt=""></p>
+<p>（此处采取的是空白背景图）</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rvgJS.png" alt=""></p>
+<p>我们可以使用ps来进行处理，但我更推荐用代码整理，因为又快又能批量还简单</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_png</span><span class="params">(s)</span>:</span></span><br><span class="line">	img = cv2.imread(s, cv2.IMREAD_UNCHANGED)</span><br><span class="line">	<span class="keyword">return</span> img</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_png</span><span class="params">(s, img)</span>:</span></span><br><span class="line">	cv2.imwrite(s, img, [int(cv2.IMWRITE_PNG_COMPRESSION), <span class="number">9</span>])</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">exchange</span><span class="params">(img, x)</span>:</span> <span class="comment">#放大图像</span></span><br><span class="line">	w, h = img.shape[<span class="number">0</span>:<span class="number">2</span>]</span><br><span class="line">	tempimg = cv2.resize(img,(w*x,h*x), interpolation=cv2.INTER_CUBIC)</span><br><span class="line">	<span class="keyword">return</span> tempimg</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Do</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    a[:,:,<span class="number">3</span>] = b[:,:,<span class="number">0</span>] <span class="comment">#合成的基本思路</span></span><br><span class="line">    <span class="keyword">return</span> a</span><br><span class="line">    </span><br><span class="line">print(<span class="string">"提取图片/合成立绘？1/2"</span>)</span><br><span class="line">a = input()</span><br><span class="line"><span class="keyword">if</span> a == <span class="string">'1'</span>: <span class="comment">#提取立绘</span></span><br><span class="line">    file_list = os.listdir(<span class="string">"./Input"</span>)</span><br><span class="line">    print(<span class="string">"共%d个图片："</span> %len(file_list))</span><br><span class="line">    print(<span class="string">'begin'</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> file_list:</span><br><span class="line">      	img = cv2.imread(<span class="string">"./Input/"</span> + i, cv2.IMREAD_UNCHANGED)</span><br><span class="line">        	<span class="keyword">if</span> img <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span> <span class="keyword">and</span> img.shape[<span class="number">0</span>] &gt; <span class="number">512</span>:</span><br><span class="line">         	<span class="keyword">if</span> <span class="string">'#'</span> <span class="keyword">in</span> i:</span><br><span class="line">          	i2 = i.replace(i[i.find(<span class="string">'#'</span>):], <span class="string">'#1[alpha].png'</span>)</span><br><span class="line">            	i3 = i.replace(i[i.find(<span class="string">'#'</span>):], <span class="string">'#1.png'</span>)</span><br><span class="line">         	<span class="keyword">else</span>:</span><br><span class="line">         		i2 = i.replace(<span class="string">".png"</span>, <span class="string">'[alpha].png'</span>)</span><br><span class="line">         		i3 = i</span><br><span class="line">         	<span class="keyword">if</span> i2 <span class="keyword">in</span> file_list:</span><br><span class="line">         		hutil.copy(<span class="string">"./Input/"</span> + i, <span class="string">"./Texture2D_A/"</span> + i3)</span><br><span class="line">         		os.remove(<span class="string">"./Input/"</span> + i)</span><br><span class="line">         		shutil.copy(<span class="string">"./Input/"</span> + i2, <span class="string">"./Texture2D_B/"</span> + i2)</span><br><span class="line">         		os.remove(<span class="string">"./Input/"</span> + i2)</span><br><span class="line">    	print(<span class="string">'over'</span>)</span><br><span class="line">    	os.system(<span class="string">'pause'</span>)</span><br><span class="line"><span class="keyword">if</span> a == <span class="string">'2'</span>: <span class="comment">#合成立绘</span></span><br><span class="line">	file_list = os.listdir(<span class="string">"./Texture2D_A"</span>)</span><br><span class="line">	print(<span class="string">"待合成%d个图片："</span> %len(file_list))</span><br><span class="line">    	<span class="keyword">for</span> i <span class="keyword">in</span> file_list:</span><br><span class="line">    		print(<span class="string">'正在处理%s'</span> %i)</span><br><span class="line">    		time_start = time.time()</span><br><span class="line">    		i2 = i.replace(<span class="string">".png"</span>, <span class="string">'[Alpha].png'</span>)</span><br><span class="line">    		a = read_png(<span class="string">'./Texture2D_A/'</span> + i)</span><br><span class="line">    		b = read_png(<span class="string">'./Texture2D_B/'</span> + i2)</span><br><span class="line">    		<span class="keyword">if</span> a.shape[<span class="number">0</span>]/b.shape[<span class="number">0</span>] != <span class="number">1</span>:</span><br><span class="line">    			b = exchange(b, int(a.shape[<span class="number">0</span>]/b.shape[<span class="number">0</span>]))</span><br><span class="line">    			save_png(<span class="string">'./Picture/'</span> + i, Do(a, b))</span><br><span class="line">    			shutil.copy(<span class="string">"./Texture2D_A/"</span> + i, <span class="string">"./Used/"</span> + i)</span><br><span class="line">    			os.remove(<span class="string">"./Texture2D_A/"</span> + i)</span><br><span class="line">    			time_end = time.time()</span><br><span class="line">    			print(<span class="string">"耗时 %f s"</span> %(time_end-time_start))</span><br><span class="line">    	print(<span class="string">'over'</span>)</span><br><span class="line">    	os.system(<span class="string">'pause'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>合成后的结果：</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rj54O.png" alt=""></p>
+<h3 id="04"><a href="#04" class="headerlink" title="04"></a>04</h3><p>有些立绘提取出来是这样的</p>
+<p><img src="https://s2.ax1x.com/2020/02/05/1rvSPS.png" alt=""></p>
+<p>我们需要查看他的obj文件看它的碎片坐标</p>
+<p>使用代码进行整合</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_file</span><span class="params">(s)</span>:</span></span><br><span class="line">	List1 = []</span><br><span class="line">	Filer = open(s,<span class="string">'r'</span>)</span><br><span class="line">	List2 = Filer.readlines()</span><br><span class="line">	Filer.close()</span><br><span class="line">	<span class="keyword">for</span> i0 <span class="keyword">in</span> range(<span class="number">0</span>, len(List2)):</span><br><span class="line">		List2[i0] = List2[i0].replace(<span class="string">"\n"</span>, <span class="string">""</span>)</span><br><span class="line">		List1.append(List2[i0].split())</span><br><span class="line">	<span class="keyword">return</span> List1</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">read_png</span><span class="params">(s)</span>:</span></span><br><span class="line">	img = cv2.imread(s, cv2.IMREAD_UNCHANGED)</span><br><span class="line">	<span class="keyword">return</span> img</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_png</span><span class="params">(s, img)</span>:</span></span><br><span class="line">	cv2.imwrite(s, img, [int(cv2.IMWRITE_PNG_COMPRESSION), <span class="number">9</span>])</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">rotate</span><span class="params">(img)</span>:</span></span><br><span class="line">	new_img = cv2.flip(img, <span class="number">-1</span>)</span><br><span class="line">	<span class="keyword">return</span> new_img</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">manage</span><span class="params">(s1, s2)</span>:</span></span><br><span class="line">	s1 = <span class="string">"./Mesh/"</span> + s1</span><br><span class="line">	max_height = max_weight = vtjShu = firstx = endx = firsty = endy = <span class="number">0</span></span><br><span class="line">	print(<span class="string">'正在处理%s'</span> %s2)</span><br><span class="line">	time_start = time.time()</span><br><span class="line">	List = read_file(s1)</span><br><span class="line">	img = read_png(<span class="string">"./Texture2D/"</span> + s2)</span><br><span class="line">	height = img.shape[<span class="number">0</span>]</span><br><span class="line">	eight = img.shape[<span class="number">1</span>]</span><br><span class="line">	img = rotate(img)</span><br><span class="line">	img = cv2.flip(img, <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(List)):</span><br><span class="line">		<span class="keyword">if</span> List[i][<span class="number">0</span>] != <span class="string">'v'</span>:</span><br><span class="line">			vtjShu = i</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		<span class="keyword">if</span> abs(int(List[i][<span class="number">1</span>])) &gt; max_weight:</span><br><span class="line">			max_weight = abs(int(List[i][<span class="number">1</span>]))</span><br><span class="line">		<span class="keyword">if</span> abs(int(List[i][<span class="number">2</span>])) &gt; max_height:</span><br><span class="line">			max_height = abs(int(List[i][<span class="number">2</span>])</span><br><span class="line">	Base_img = np.zeros([max_height+<span class="number">1</span>, max_weight+<span class="number">1</span>, <span class="number">4</span>], np.uint8)</span><br><span class="line">	jShu = vtjShu</span><br><span class="line">	<span class="keyword">while</span> vtjShu &lt; len(List):</span><br><span class="line">		<span class="keyword">if</span> List[vtjShu][<span class="number">0</span>] != <span class="string">'vt'</span>:</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		firsty = int(float(List[vtjShu][<span class="number">1</span>]) * float(weight) + <span class="number">0.5</span>)</span><br><span class="line">		firstx = int(float(List[vtjShu][<span class="number">2</span>]) * float(height) + <span class="number">0.5</span>)</span><br><span class="line">		endy = int(float(List[vtjShu+<span class="number">2</span>][<span class="number">1</span>]) * float(weight) + <span class="number">0.5</span>)</span><br><span class="line">		endx = int(float(List[vtjShu+<span class="number">2</span>][<span class="number">2</span>]) * float(height) + <span class="number">0.5</span>)</span><br><span class="line">		y1 = abs(int(List[vtjShu-jShu+<span class="number">1</span>][<span class="number">1</span>]))</span><br><span class="line">		x1 = abs(int(List[vtjShu-jShu+<span class="number">1</span>][<span class="number">2</span>]))</span><br><span class="line">		<span class="keyword">for</span> i <span class="keyword">in</span> range(firstx, endx):</span><br><span class="line">			<span class="keyword">for</span> j <span class="keyword">in</span> range(firsty, endy):</span><br><span class="line">				Base_img[x1+i-firstx][y1+j-firsty] = img[i][j]</span><br><span class="line">		vtjShu += <span class="number">4</span></span><br><span class="line">	Base_img = rotate(Base_img)</span><br><span class="line">	save_png(<span class="string">"./Picture/"</span>+s2, Base_img)</span><br><span class="line">	time_end = time.time()</span><br><span class="line">	print(<span class="string">"处理完毕，耗时 %f s"</span> %(time_end-time_start))</span><br><span class="line"></span><br><span class="line">Mesh_list = os.listdir(<span class="string">"./Mesh"</span>)</span><br><span class="line">Texture2D_list = os.listdir(<span class="string">"./Texture2D"</span>)</span><br><span class="line">print(<span class="string">"检测到%d组"</span> %len(Texture2D_list))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(Texture2D_list)):</span><br><span class="line">	s = Texture2D_list[i].replace(<span class="string">".png"</span>, <span class="string">"-mesh.obj"</span>)</span><br><span class="line">	<span class="keyword">if</span> s <span class="keyword">not</span> <span class="keyword">in</span> Mesh_list:</span><br><span class="line">		print(<span class="string">"Can't find the %s in Mesh"</span> %s)	</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		manage(s, Texture2D_list[i])</span><br><span class="line">		shutil.copy(<span class="string">"./Texture2D/"</span> + Texture2D_list[i], <span class="string">"./Used/"</span> + Texture2D_list[i])</span><br><span class="line">		os.remove(<span class="string">"./Texture2D/"</span> + Texture2D_list[i])</span><br><span class="line">print(<span class="string">"Over"</span>)</span><br><span class="line">os.system(<span class="string">"pause"</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2020/02/05/1rjhE6.md.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://soul-hd.github.io/2020/02/05/%E5%85%B3%E4%BA%8E%E6%9F%90%E6%89%8B%E6%B8%B8%E7%9A%84%E6%8B%86%E5%8C%85/" data-id="ck690awor000tcwvw2t6z99qx" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%89%E5%8D%93/" rel="tag">安卓</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/20/%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%9A%84webshell/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">一些不包含数字和字母的webshell理解</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <h1 class="blog-title">魂淡的随笔录</h1>
+    <h2 class="blog-subtitle"></h2>
+    <ul class="blog-link">
+     
+          <a href="/" title="Home">
+            <li>主页</li>
+          </a>
+        
+          <a href="/archives" title="Archives">
+            <li>归档</li>
+          </a>
+        
+          <a href="/categories" title="Categories">
+            <li>分类</li>
+          </a>
+        
+          <a href="/tags" title="Tags">
+            <li>标签</li>
+          </a>
+        
+    </ul>
+  </div>
+</div>
+
+  
+    <div class="widget-wrap">
+  <h3 class="widget-title"></h3>
+  <div class="widget">
+    <img class="avatar" src="../img/1.jpg">
+    <h2 class="author">魂淡</h2>
+    <h3 class="description"></h3>
+    <div class="count-box">
+      <a href="/archives"><div><strong>19</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>4</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>7</strong><br>标签</div></a>
+    </div>
+
+
+
+    <div class="social-link">
+      
+        <a class="hvr-bounce-in" href="" target="_blank" title="">
+          
+        </a>
+      
+    </div>
+
+    <div class="friend-link">
+      <h2>友情链接</h2>
+      
+        <a class="hvr-bounce-in" href="http://leafy.coding.me/" target="_blank" title="Cheung">
+          Cheung
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://ionssource.cn/" target="_blank" title="阿猫阿狗">
+          阿猫阿狗
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://www.oscarice.com/" target="_blank" title="Oscarice">
+          Oscarice
+        </a>
+      
+        <a class="hvr-bounce-in" href="http://www.naraku.cn/" target="_blank" title="风渐远">
+          风渐远
+        </a>
+      
+        <a class="hvr-bounce-in" href="https://blog.csdn.net/qq_39936434/" target="_blank" title="吃肉唐僧">
+          吃肉唐僧
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy;2019 - 2020 魂淡<br>
+      由<a href="http://hexo.io/" target="_blank">Hexo</a>强力驱动 | 
+      主题-<a href="https://github.com/ShanaMaid/hexo-theme-shana" target="_blank" rel="noopener">Shana</a>
+      
+    </div>
+    
+  </div>
+</footer>
+    </div>
+    
+
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//apps.bdimg.com/libs/wow/0.1.6/wow.min.js"></script>
+<script>
+new WOW().init();
+</script>   
+
+
+  
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+  
+<script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+  
+<link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+
+  
+<script src="/plugin/galmenu/GalMenu.js"></script>
+
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
+
+  <section class="hidden-xs"> 
+  <ul class="cb-slideshow"> 
+    <li><span>苟利</span></li> 
+    <li><span>国家</span></li> 
+    <li><span>生死以</span></li> 
+    <li><span>岂能</span></li> 
+    <li><span>祸福</span></li> 
+    <li><span>趋避之</span></li> 
+  </ul>
+</section>
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
