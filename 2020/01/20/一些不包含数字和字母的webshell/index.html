@@ -13,7 +13,7 @@
 <meta property="og:description" content="一些不包含数字和字母的webshell理解前言前端时间群里大佬发了一个代码询问我们里面的原理，代码如下：">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-20T00:00:00.000Z">
-<meta property="article:modified_time" content="2020-01-22T07:13:18.616Z">
+<meta property="article:modified_time" content="2020-02-20T08:06:21.918Z">
 <meta property="article:author" content="魂淡">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
@@ -47,7 +47,7 @@
     <h2 class="author">魂淡</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>19</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>20</strong><br>文章</div></a>
       <a href="/categories"><div><strong>4</strong><br>分类</div></a>
       <a href="/tags"><div><strong>7</strong><br>标签</div></a>
     </div>
@@ -115,8 +115,10 @@
 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$__ = (<span class="string">'&gt;'</span> &gt; <span class="string">'&lt;'</span>) + (<span class="string">'&gt;'</span> &gt; <span class="string">'&lt;'</span>);</span><br><span class="line">$_ = $__ / $__;</span><br><span class="line"></span><br><span class="line">$____ = <span class="string">''</span>;</span><br><span class="line">$___ = <span class="string">"瞰"</span>;</span><br><span class="line">$____ .= ~($___&#123;$_&#125;);</span><br><span class="line">$___ = <span class="string">"和"</span>;<span class="comment">//(3) he</span></span><br><span class="line">$____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"和"</span>;</span><br><span class="line">$____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"的"</span>;</span><br><span class="line">$____ .= ~($___&#123;$_&#125;);</span><br><span class="line">$___ = <span class="string">"半"</span>;</span><br><span class="line">$____ .= ~($___&#123;$_&#125;); </span><br><span class="line">$___ = <span class="string">"始"</span>;</span><br><span class="line">$____ .= ~($___&#123;$__&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$_____ = <span class="string">'_'</span>;</span><br><span class="line">$___ = <span class="string">"俯"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"瞰"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$__&#125;);</span><br><span class="line">$___ = <span class="string">"次"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$_&#125;);</span><br><span class="line">$___ = <span class="string">"站"</span>;</span><br><span class="line">$_____ .= ~($___&#123;$_&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">$_ = $$_____;</span><br><span class="line">$____($_[$__]);</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>后来在诸位大佬的帮助下找到了这篇文章，顿时眼界打开。</p>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="源码理解"><a href="#源码理解" class="headerlink" title="源码理解"></a>源码理解</h3><p>第一行的$__ = (‘&gt;’ &gt; ‘&lt;’) + (‘&gt;’ &gt; ‘&lt;’);实际上是ture+ture也就是1+1</p>
+<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><h3 id="源码理解"><a href="#源码理解" class="headerlink" title="源码理解"></a>源码理解</h3><p>第二行的$__ = (‘&gt;’ &gt; ‘&lt;’) + (‘&gt;’ &gt; ‘&lt;’);实际上是true+true也就是1+1（简单地说就是一个大于号<code>&gt;</code>和一个小于号<code>&lt;</code>的比较，由于大于号的ASCII码十进制是<code>62</code>，小于号是<code>60</code>，因此这里<code>&gt;</code>大于<code>&lt;</code>是成立的，返回true）</p>
 <p>所以$__=2</p>
+<p>第三行的$_ = $__ / $__;</p>
+<p>即2/2，所以$_=1</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$___ &#x3D; &quot;瞰&quot;;</span><br><span class="line">$____ .&#x3D; ~($___&#123;$_&#125;);</span><br></pre></td></tr></table></figure>
 
 <p>这两行代码的原理是这样的：</p>
@@ -127,7 +129,7 @@
 <p>所以这两行代码实际上就是先转为utf-8编码，然后通过{}将里面的字符提取出来，再进行取反，然后就生成a这个字符了。</p>
 <p>而这个加密的关键就是在于utf-8编码这里。</p>
 <p>下面我们来说明一下相关的原理</p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>我们以“瞰”这个汉字为例。</p>
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>我们以“瞰”这个汉字为例。</p>
 <p>首先我们这个字要在网络上传播是需要使用二进制来表示电压的。</p>
 <p>在unicode编码表中，“瞰”这个字的编码为0x77B0.</p>
 <p>转成utf-8模式，对照它的映射表，我们这个0x77B0是在0x000-0xFFFF之间，而utf-8是使用3字节模板（1110xxxx 10xxxxxx 10xxxxxx），所以我们需要将77B0转成二进制</p>
@@ -139,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://soul-hd.github.io/2020/01/20/%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%9A%84webshell/" data-id="ck690e1js000wkkvwdtau4k1r" class="article-share-link">分享</a>
+      <a data-url="https://soul-hd.github.io/2020/01/20/%E4%B8%80%E4%BA%9B%E4%B8%8D%E5%8C%85%E5%90%AB%E6%95%B0%E5%AD%97%E5%92%8C%E5%AD%97%E6%AF%8D%E7%9A%84webshell/" data-id="ck6xlisuq000li0vwa5327kba" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a></li></ul>
@@ -211,7 +213,7 @@
     <h2 class="author">魂淡</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>19</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>20</strong><br>文章</div></a>
       <a href="/categories"><div><strong>4</strong><br>分类</div></a>
       <a href="/tags"><div><strong>7</strong><br>标签</div></a>
     </div>
@@ -241,7 +243,7 @@
           Oscarice
         </a>
       
-        <a class="hvr-bounce-in" href="http://www.naraku.cn/" target="_blank" title="风渐远">
+        <a class="hvr-bounce-in" href="https://www.naraku.cn/" target="_blank" title="风渐远">
           风渐远
         </a>
       
