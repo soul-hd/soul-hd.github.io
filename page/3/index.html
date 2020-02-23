@@ -3,20 +3,15 @@
 <head>
   <meta charset="utf-8">
   
-  <title>CCF201509-2（python） | 魂淡的随笔录</title>
+  <title>魂淡的随笔录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题描述　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？　　注意闰年的2月有29天。满足下面条件之一的是闰年：　　1） 年份是4的整数倍，而且不是100的整数倍；　　2） 年份是400的整数倍。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CCF201509-2（python）">
-<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;2019&#x2F;07&#x2F;04&#x2F;CCF201509-2&#x2F;index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="魂淡的随笔录">
+<meta property="og:url" content="https:&#x2F;&#x2F;soul-hd.github.io&#x2F;page&#x2F;3&#x2F;index.html">
 <meta property="og:site_name" content="魂淡的随笔录">
-<meta property="og:description" content="问题描述　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？　　注意闰年的2月有29天。满足下面条件之一的是闰年：　　1） 年份是4的整数倍，而且不是100的整数倍；　　2） 年份是400的整数倍。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-07-04T00:00:00.000Z">
-<meta property="article:modified_time" content="2019-11-18T06:28:02.086Z">
 <meta property="article:author" content="魂淡">
-<meta property="article:tag" content="python">
-<meta property="article:tag" content="ccf">
+<meta property="article:tag" content="魂淡">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="魂淡的随笔录" type="application/atom+xml">
@@ -74,9 +69,11 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-CCF201509-2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-CCF201512-2" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/07/04/CCF201509-2/" class="article-date">
+    <a href="/2019/07/04/CCF201512-2/" class="article-date">
   <time class="post-time" datetime="2019-07-04T00:00:00.000Z" itemprop="datePublished">
     <span class="post-month">7月</span><br/>
     <span class="post-day">04</span>
@@ -90,8 +87,8 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      CCF201509-2（python）
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/04/CCF201512-2/">CCF201512-2（python）</a>
     </h1>
   
 
@@ -110,16 +107,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>问题描述<br>　　给定一个年份y和一个整数d，问这一年的第d天是几月几日？<br>　　注意闰年的2月有29天。满足下面条件之一的是闰年：<br>　　1） 年份是4的整数倍，而且不是100的整数倍；<br>　　2） 年份是400的整数倍。</p>
-<a id="more"></a>    
-<p>输入格式<br>　　输入的第一行包含一个整数y，表示年份，年份在1900到2015之间（包含1900和2015）。<br>　　输入的第二行包含一个整数d，d在1至365之间。<br>输出格式<br>　　输出两行，每行一个整数，分别表示答案的月份和日期。<br>样例输入<br>2015<br>80<br>样例输出<br>3<br>21<br>样例输入<br>2000<br>40<br>样例输出<br>2<br>9    </p>
-<p>思路：<br>将非闰月的每月天数存入列表中<br>先判断该年是否为闰年，若是则将列表中的二月改为29天<br>设一个循环让输入的天数去不断-列表里的天数，同时记录减了几个月，直到两则相减小于0则将这次的天数为该月的第几天。</p>
-<p>代码：    </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">n = int(input())</span><br><span class="line">m = int(input())</span><br><span class="line">d=[<span class="number">31</span>, <span class="number">28</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>, <span class="number">30</span>, <span class="number">31</span>]</span><br><span class="line"><span class="keyword">if</span> (n % <span class="number">4</span> == <span class="number">0</span> <span class="keyword">and</span> n % <span class="number">100</span> != <span class="number">0</span>) <span class="keyword">or</span> n % <span class="number">400</span> == <span class="number">0</span>:</span><br><span class="line">   d[<span class="number">1</span>] = <span class="number">29</span></span><br><span class="line">mon = <span class="number">1</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> d:</span><br><span class="line">    <span class="keyword">if</span> m - i &gt; <span class="number">0</span>:</span><br><span class="line">        m = m - i</span><br><span class="line">        mon = mon + <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">print(mon)</span><br><span class="line">print(m)</span><br></pre></td></tr></table></figure>
+        <p>问题描述<br>　　消除类游戏是深受大众欢迎的一种游戏，游戏在一个包含有n行m列的游戏棋盘上进行，棋盘的每一行每一列的方格上放着一个有颜色的棋子，当一行或一列上有连续三个或更多的相同颜色的棋子时，这些棋子都被消除。当有多处可以被消除时，这些地方的棋子将同时被消除。<br>　　现在给你一个n行m列的棋盘，棋盘中的每一个方格上有一个棋子，请给出经过一次消除后的棋盘。<br>　　请注意：一个棋子可能在某一行和某一列同时被消除。</p>
+        
+          <p class="article-more-link">
+            <a href="/2019/07/04/CCF201512-2/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://soul-hd.github.io/2019/07/04/CCF201509-2/" data-id="ck6ylzx4q0006q8vw3l7lcsrf" class="article-share-link">分享</a>
+      <a data-url="https://soul-hd.github.io/2019/07/04/CCF201512-2/" data-id="ck6ylzx5u0010q8vw9wtx519x" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ccf/" rel="tag">ccf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
@@ -127,31 +124,17 @@
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2019/07/04/CCF201503-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          CCF201503-1（python）
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/07/04/CCF201503-3/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">CCF201503-3（python）</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
 
 
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; pre</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
 </section>
         
           <aside id="sidebar">
